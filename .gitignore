@@ -1,0 +1,4 @@
+.DS_Store
+.env
+.eslintrc.json
+node_modules/

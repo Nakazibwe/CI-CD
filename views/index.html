@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kawanguzi Health Center</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/cssfiles/bootstrap.min.css">
+    <link rel="stylesheet" href="/cssfiles/index.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="container">
+            <form action="" id="form-id" name="patientform">
+                <div class="row">
+                    <div class="col-lg-5 top-left-div"><img src="/imagefiles/ugandaflag.png" width="266px" height="99px"
+                            alt="ugandan flag"></div>
+                    <div class="col-lg-2 top-center-div"><img src="/imagefiles/courtofarms.png" width="100px"
+                            height="99px" alt="court of arms"></div>
+                    <div class="col-lg-5 top-right-div"><img src="/imagefiles/ugandaflag.png" width="266px"
+                            height="99px" alt="ugandan flag" s></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 middle-left-div"></div>
+                    <div class="col-lg-8 middle-center-div">
+                        <p>Ministry of Health</p>
+                        <h3>COVID-19(CORONA VIRUS)</h3>
+                        <p>Virus-Test Registration Form</p>
+                    </div>
+                    <div class="col-lg-2 middle-right-div"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 middle-left-div"></div>
+                    <div class="col-lg-8 middle-center-div success" id="success-div"></div>
+                    <div class="col-lg-2 middle-right-div"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class=" col-lg-8 form-control">
+                        <div class="left-input-div">
+                            <label for="">Surname</label><br>
+                            <input type="text" name='surname' class='left-input'><br>
+                            <small class='left-input-error' id='surname-error'></small>
+                        </div>
+                        <div class="right-input-div">
+                            <label for="">Given name</label><br>
+                            <input type="text" name='givenname' class='right-input'><br>
+                            <small class='right-input-error' id='givenname-error'></small>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class=" col-lg-8 form-control">
+                        <div class="left-input-div">
+                            <label for="">Date of Birth</label><br>
+                            <input type="date" name='patientdob' class='left-input'><br>
+                            <small class='left-input-error' id='dob-error'></small>
+                        </div>
+                        <div class="right-input-div">
+                            <label for="">Place of Residence</label><br>
+                            <input type="text" name='residence' class='right-input'><br>
+                            <small class='right-input-error' id='residence-error'></small>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class=" col-lg-8 form-control">
+                        <div class="left-input-div">
+                            <label for="">Occupation</label><br>
+                            <input type="text" name='occupation' class='left-input'><br>
+                            <small class='left-input-error' id='occupation-error'></small>
+                        </div>
+                        <div class="right-input-div">
+                            <label for="">Nationality</label><br>
+                            <input type="text" name='nationality' class='right-input'><br>
+                            <small class='right-input-error' id='nationality-error'></small>
+                        </div>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class=" col-lg-8 form-action gender-div">
+                        <p>Gender</p>
+                    </div>
+                    <div class="col-lg-2 "></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 "></div>
+                    <div class="col-lg-8 form-control genders">
+                        <div class="male-div ">
+                            <label class="form-check-label" for="malegender">Male</label>
+                            <input class="form-check-input" type="radio" name="gender" id="malegender" value="Male"
+                                checked>
+                        </div>
+                        <div class="female-div ">
+                            <label class="form-check-label" for="femalegender">Female</label>
+                            <input class="form-check-input" type="radio" name="gender" id="femalegender" value="Female">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 "></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 "></div>
+                    <div class="col-lg-8  form-control select-div">
+                        <select name="category">
+
+                            <option value="default"> --Select Category-- </option>
+                            <option value="Returnee">Returnee</option>
+                            <option value="Contact">Contact</option>
+                            <option value="Alert">Alert</option>
+                            <option value="Volunteer">Volunteer</option>
+                        </select>
+                    </div>
+
+                    <div class="col-lg-2 "></div>
+                    <div class="small" id='category-error'></div>
+
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 "></div>
+                    <div class="col-lg-5 register-div">
+                        <input type="submit" value='Register'>
+                    </div>
+                    <div class="col-lg-1 "></div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="/javaScriptfiles/bootstrap.min.js"></script>
+    <script src="/javaScriptfiles/index.js"></script>
+</body>
+
+</html>

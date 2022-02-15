@@ -1,0 +1,113 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Kawanguzi Health Center
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet' href='/cssfiles/bootstrap.min.css')
+    link(rel='stylesheet' href='/cssfiles/index.css')
+  body
+    .row
+      .container
+        form#form-id(action='' method='POST' name='patientform')
+          .row
+            .col-lg-5.top-left-div
+              img(src='/imagefiles/ugandaflag.png' width='266px' height='99px' alt='ugandan flag')
+            .col-lg-2.top-center-div
+              img(src='/imagefiles/courtofarms.png' width='100px' height='99px' alt='court of arms')
+            .col-lg-5.top-right-div
+              img(src='/imagefiles/ugandaflag.png' width='266px' height='99px' alt='ugandan flag' s)
+          .row
+            .col-lg-2.middle-left-div
+            .col-lg-8.middle-center-div
+              p Ministry of Health
+              h3 COVID-19(CORONA VIRUS)
+              p Virus-Test Registration Form
+            .col-lg-2.middle-right-div
+          .row
+            .col-lg-2.middle-left-div
+            #success-div.col-lg-8.middle-center-div.success
+            .col-lg-2.middle-right-div
+          .row
+            .col-lg-2
+            .col-lg-8.form-control
+              .left-input-div
+                label(for='') Surname
+                br
+                input.left-input(type='text' name='surname')
+                br
+                small#surname-error.left-input-error
+              .right-input-div
+                label(for='') Given name
+                br
+                input.right-input(type='text' name='givenname')
+                br
+                small#givenname-error.right-input-error
+            .col-lg-2
+          .row
+            .col-lg-2
+            .col-lg-8.form-control
+              .left-input-div
+                label(for='') Date of Birth
+                br
+                input.left-input(type='date' name='patientdob')
+                br
+                small#dob-error.left-input-error
+              .right-input-div
+                label(for='') Place of Residence
+                br
+                input.right-input(type='text' name='residence')
+                br
+                small#residence-error.right-input-error
+            .col-lg-2
+          .row
+            .col-lg-2
+            .col-lg-8.form-control
+              .left-input-div
+                label(for='') Occupation
+                br
+                input.left-input(type='text' name='occupation')
+                br
+                small#occupation-error.left-input-error
+              .right-input-div
+                label(for='') Nationality
+                br
+                input.right-input(type='text' name='nationality')
+                br
+                small#nationality-error.right-input-error
+            .col-lg-2
+          .row
+            .col-lg-2
+            .col-lg-8.form-action.gender-div
+              p Gender
+            .col-lg-2
+          .row
+            .col-lg-2
+            .col-lg-8.form-control.genders
+              .male-div
+                label.form-check-label(for='malegender') Male
+                input#malegender.form-check-input(type='radio' name='gender' value='Male' checked)
+              .female-div
+                label.form-check-label(for='femalegender') Female
+                input#femalegender.form-check-input(type='radio' name='gender' value='Female')
+            .col-lg-2
+          .row
+            .col-lg-2
+            .col-lg-8.form-control.select-div
+              select(name='category')
+                option(value='default')  --Select Category-- 
+                option(value='Returnee') Returnee
+                option(value='Contact') Contact
+                option(value='Alert') Alert
+                option(value='Volunteer') Volunteer
+            .col-lg-2.
+            #category-error.small
+          .row
+            .col-lg-6.
+            .col-lg-5.register-div
+              input(type='submit' value='Register')
+            .col-lg-1.
+    script(src='/javaScriptfiles/bootstrap.min.js')
+    script(src='/javaScriptfiles/index.js')
