@@ -42,6 +42,7 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname + '/views'));
 
 // Middleware.
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname + '/public')));
 app.use('/public/imagefiles', express.static(__dirname + '/public/imagefiles'));
@@ -57,5 +58,5 @@ app.use('/', PatientRegRoutes);
 
 // Server port
 app.listen(port, () => {
-  console.log(`We are now Live on port ${port}`);
+  console.log(`http://localhost:${port}`);
 });
