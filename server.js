@@ -10,7 +10,8 @@ const path = require('path');
 const mongoose = require('mongoose');
 const { urlencoded } = require('body-parser');
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
 
 // Requiring the dotenv
 require('dotenv').config();
@@ -52,11 +53,8 @@ app.use('/public/imagefiles', express.static(__dirname + '/public/imagefiles'));
 // Routes for the project.
 app.use('/', PatientRegRoutes);
 
-
-
-
-
 // Server port
 app.listen(port, () => {
   console.log(`http://localhost:${port}`);
 });
+module.exports = app;
