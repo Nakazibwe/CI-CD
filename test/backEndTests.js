@@ -4,7 +4,6 @@ const chai = require('chai');
 const mocha = require('mocha');
 const chaiHttp = require('chai-http');
 const { describe } = require('mocha');
-const controller = require('../controllers/patientControllers');
 const app = require('../server');
 
 chai.should();
@@ -43,7 +42,7 @@ describe('Health Center API', () => {
       });
   });
   it('Updating patient', (done) => {
-    const patientId = '618e33df815bba7af6ad59d4';
+    const patientId = '620db35713f7f98b9a9cab36';
     const updatepatient = {
       surname: 'Grace',
       givenname: 'Ushindi',
