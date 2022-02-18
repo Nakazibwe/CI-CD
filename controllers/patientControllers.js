@@ -17,7 +17,6 @@ exports.getRegPage = async (req, res) => {
 exports.getPatients = async (req, res) => {
   try {
     const availablePatients = await PatientReg.find();
-    console.log(availablePatients);
     if (!availablePatients) {
       throw 'No registered patients currently';
     }
@@ -48,4 +47,36 @@ exports.postPatients = async (req, res) => {
     }
     return res.status(400).send('Something went wrong!!');
   }
+};
+exports.updatePatient = async (req, res) => {
+  const { id } = req.params;
+  const {
+    surname, givenname, patientdob, residence, occupation, nationality, gender, category,
+  } = req.body;
+  try {
+    const selectedForUpdate = await PatientReg.findById(id);
+    if (!selectedForUpdate) {
+      throw 'Selected patient for Update unavailable.';
+    }
+    selectedForUpdate.surname = surname;
+    selectedForUpdate.givenname = givenname;
+    selectedForUpdate.patientdob = patientdob;
+    selectedForUpdate.residence = residence;
+    selectedForUpdate.occupation = occupation;
+    selectedForUpdate.nationality = nationality;
+    selectedForUpdate.gender = gender;
+    selectedForUpdate.category = category;
+    await selectedForUpdate.save();
+
+    res.status(201).json(selectedForUpdate);
+  } catch (error) {
+    if (error == 'Selected patient for Update unavailable.') {
+      return res.status(404).json({ error });
+    }
+
+    return res.status(400).json({ error });
+  }
+};
+exports.deletePatient = async (req, res) => {
+
 };
