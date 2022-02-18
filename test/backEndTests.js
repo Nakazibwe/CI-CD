@@ -1,3 +1,4 @@
+/* eslint-disable prefer-template */
 /* eslint-disable no-undef */
 const chai = require('chai');
 const mocha = require('mocha');
@@ -18,15 +19,36 @@ describe('Health Center API', () => {
       .get('/patients')
       .end((error, response) => {
         response.should.have.status(200);
-        // response.body.should.be.a('array');
+        response.body.should.be.a('array');
         done();
       });
   });
-  it('Posting  patients', (done) => {
+  it('Post patients ', (done) => {
+    const patient = {
+      surname: 'Grace',
+      givenname: 'Ushindi',
+      patientdob: '1995-08-08',
+      residence: 'Toronto',
+      occupation: 'Philanthropist',
+      nationality: 'Canadian',
+      gender: 'female',
+      category: 'Returnee',
+    };
     chai.request(app)
       .post('/')
+      .send(patient)
       .end((error, response) => {
         response.should.have.status(200);
+        done();
+      });
+  });
+  it('Updating patient', (done) => {
+    const patientId = '618e33df815bba7af6ad59d4';
+    chai.request(app)
+      .put('/patients/' + patientId)
+      .end((error, response) => {
+        response.should.have.status(201);
+        response.should.be.a('object');
         done();
       });
   });
