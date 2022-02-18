@@ -44,8 +44,19 @@ describe('Health Center API', () => {
   });
   it('Updating patient', (done) => {
     const patientId = '618e33df815bba7af6ad59d4';
+    const updatepatient = {
+      surname: 'Grace',
+      givenname: 'Ushindi',
+      patientdob: '1995-08-08',
+      residence: 'Toronto',
+      occupation: 'Philanthropist',
+      nationality: 'Canadian',
+      gender: 'female',
+      category: 'Returnee',
+    };
     chai.request(app)
       .put('/patients/' + patientId)
+      .send(updatepatient)
       .end((error, response) => {
         response.should.have.status(201);
         response.should.be.a('object');
