@@ -38,6 +38,7 @@ describe('Health Center API', () => {
       .send(patient)
       .end((error, response) => {
         response.should.have.status(200);
+        error.should.have.status(400);
       });
   });
   it('Updating patient', async () => {
