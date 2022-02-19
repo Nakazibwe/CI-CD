@@ -6,6 +6,7 @@ const mocha = require('mocha');
 const chaiHttp = require('chai-http');
 const { describe } = require('mocha');
 const app = require('../server');
+const { deleteOne } = require('../models/patientsRegModels');
 
 chai.should();
 chai.use(chaiHttp);
@@ -38,6 +39,7 @@ describe('Health Center API', () => {
       .send(patient)
       .end((error, response) => {
         response.should.have.status(200);
+        done();
       });
   });
 
