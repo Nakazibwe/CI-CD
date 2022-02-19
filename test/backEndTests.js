@@ -14,16 +14,15 @@ chai.use(chaiHttp);
 describe('Health Center API', () => {
   // Testing the get route.
 
-  it('Get All existing patients', async (done) => {
+  it('Get All existing patients', async () => {
     chai.request(app)
       .get('/patients')
       .end((error, response) => {
         response.should.have.status(200);
         response.body.should.be.a('array');
-        done();
       });
   });
-  it('Post patients ', async(done) => {
+  it('Post patients ', async () => {
     const patient = {
       surname: 'Grace',
       givenname: 'Ushindi',
@@ -39,10 +38,9 @@ describe('Health Center API', () => {
       .send(patient)
       .end((error, response) => {
         response.should.have.status(200);
-        done();
       });
   });
-  it('Updating patient', async (done) => {
+  it('Updating patient', async () => {
     const patientId = '620db2bfe5fc468f109c7fed';
     const updatepatient = {
       surname: 'Grace',
@@ -60,25 +58,22 @@ describe('Health Center API', () => {
       .end((error, response) => {
         response.should.have.status(201);
         response.should.be.a('object');
-        done();
       });
   });
-  it('Unavailable patient for deleting', async(done) => {
+  it('Unavailable patient for deleting', async () => {
     const patientid = '618e33df815bba7af6ad59d4';
     chai.request(app)
       .delete('/patients/' + patientid)
       .end((error, response) => {
         response.should.have.status(404);
-        done();
       });
   });
-  it('Deleting a patient', async(done) => {
+  it('Deleting a patient', async () => {
     const patientid = '620db8bb869dd317ba45d4bc';
     chai.request(app)
       .delete('/patients/' + patientid)
       .end((error, response) => {
         response.should.have.status(200);
-        done();
       });
   });
 });
