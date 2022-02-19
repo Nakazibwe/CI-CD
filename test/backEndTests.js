@@ -23,7 +23,7 @@ describe('Health Center API', () => {
         response.body.should.be.a('array');
       });
   });
-  it('Post patients ', async () => {
+  it('Post patients ', async (done) => {
     const patient = {
       surname: 'Grace',
       givenname: 'Ushindi',
@@ -36,7 +36,7 @@ describe('Health Center API', () => {
     };
     chai.request(app)
       .post('/')
-      .then.send(patient)
+      .send(patient)
       .end((error, response) => {
         response.should.have.status(200);
         done();
