@@ -58,7 +58,6 @@ describe('Health Center API', () => {
       .end((error, response) => {
         response.should.have.status(201);
         response.should.be.a('object');
-        done();
       });
   });
   it('Unavailable patient for deleting', async () => {
