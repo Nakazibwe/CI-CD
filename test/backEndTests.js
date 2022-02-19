@@ -73,7 +73,7 @@ describe('Health Center API', () => {
       });
   });
   it('Deleting a patient', (done) => {
-    const patientid = '620db35713f7f98b9a9cab36';
+    const patientid = '620db8bb869dd317ba45d4bc';
     chai.request(app)
       .delete('/patients/' + patientid)
       .end((error, response) => {
