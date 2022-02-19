@@ -22,24 +22,24 @@ describe('Health Center API', () => {
         response.body.should.be.a('array');
       });
   });
-  it('Post patients ', async () => {
-    const patient = {
-      surname: 'Grace',
-      givenname: 'Ushindi',
-      patientdob: '1995-08-08',
-      residence: 'Toronto',
-      occupation: 'Philanthropist',
-      nationality: 'Canadian',
-      gender: 'female',
-      category: 'Returnee',
-    };
-    chai.request(app)
-      .post('/')
-      .send(patient)
-      .end((error, response) => {
-        response.should.have.status(200);
-      });
-  });
+  // it('Post patients ', async () => {
+  //   const patient = {
+  //     surname: 'Grace',
+  //     givenname: 'Ushindi',
+  //     patientdob: '1995-08-08',
+  //     residence: 'Toronto',
+  //     occupation: 'Philanthropist',
+  //     nationality: 'Canadian',
+  //     gender: 'female',
+  //     category: 'Returnee',
+  //   };
+  //   chai.request(app)
+  //     .post('/')
+  //     .send(patient)
+  //     .end((error, response) => {
+  //       response.should.have.status(200);
+  //     });
+  // });
   it('Updating patient', async () => {
     const patientId = '620db2bfe5fc468f109c7fed';
     const updatepatient = {
