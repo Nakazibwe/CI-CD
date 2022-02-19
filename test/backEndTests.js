@@ -36,7 +36,7 @@ describe('Health Center API', () => {
     };
     chai.request(app)
       .post('/')
-      .send(patient)
+      .then.send(patient)
       .end((error, response) => {
         response.should.have.status(200);
         done();
