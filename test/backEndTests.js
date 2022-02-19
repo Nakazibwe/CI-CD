@@ -61,7 +61,7 @@ describe('Health Center API', () => {
         done();
       });
   });
-  it('Unavailable patient for deleting', (done) => {
+  it('Unavailable patient for deleting', async () => {
     const patientid = '618e33df815bba7af6ad59d4';
     chai.request(app)
       .delete('/patients/' + patientid)
