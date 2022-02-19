@@ -23,7 +23,7 @@ describe('Health Center API', () => {
         response.body.should.be.a('array');
       });
   });
-  it('Post patients ', async (done) => {
+  it('Post patients ', async () => {
     const patient = {
       surname: 'Grace',
       givenname: 'Ushindi',
@@ -39,7 +39,6 @@ describe('Health Center API', () => {
       .send(patient)
       .end((error, response) => {
         response.should.have.status(200);
-        done();
       });
   });
 
