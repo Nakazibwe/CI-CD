@@ -33,7 +33,7 @@ describe('Health Center API', () => {
       gender: 'female',
       category: 'Returnee',
     };
-    await chai.request(app)
+    chai.request(app)
       .post('/')
       .send(patient)
       .end((error, response) => {
