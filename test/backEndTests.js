@@ -72,13 +72,13 @@ describe('Health Center API', () => {
         done();
       });
   });
-  // it('Deleting a patient', (done) => {
-  //   const patientid = '620db35713f7f98b9a9cab36';
-  //   chai.request(app)
-  //     .delete('/patients/' + patientid)
-  //     .end((error, response) => {
-  //       response.should.have.status(200);
-  //       done();
-  //     });
-  // });
+  it('Deleting a patient', (done) => {
+    const patientid = '620db35713f7f98b9a9cab36';
+    chai.request(app)
+      .delete('/patients/' + patientid)
+      .end((error, response) => {
+        response.should.have.status(200);
+        done();
+      });
+  });
 });
