@@ -1,4 +1,4 @@
-FROM node:12.18.1
+FROM node:16.7.0
 COPY . /app
 WORKDIR /app
 RUN npm install
