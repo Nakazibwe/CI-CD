@@ -43,7 +43,7 @@ describe('Health Center API', () => {
       });
   });
   it('Updating patient', (done) => {
-    const patientId = '618e35aac71423e66b7766c2';
+    const patientId = '620db2bfe5fc468f109c7fed';
     const updatepatient = {
       surname: 'Grace',
       givenname: 'Ushindi',
@@ -72,13 +72,13 @@ describe('Health Center API', () => {
         done();
       });
   });
-  it('Deleting a patient', (done) => {
-    const patientid = '620db35713f7f98b9a9cab36';
-    chai.request(app)
-      .delete('/patients/' + patientid)
-      .end((error, response) => {
-        response.should.have.status(200);
-        done();
-      });
-  });
+  // it('Deleting a patient', (done) => {
+  //   const patientid = '620db35713f7f98b9a9cab36';
+  //   chai.request(app)
+  //     .delete('/patients/' + patientid)
+  //     .end((error, response) => {
+  //       response.should.have.status(200);
+  //       done();
+  //     });
+  // });
 });
