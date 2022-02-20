@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prefer-template */
 /* eslint-disable no-undef */
-const { assert } = require('chai');
+const chai = require('chai');
 const mocha = require('mocha');
 const chaiHttp = require('chai-http');
 const { describe } = require('mocha');
@@ -44,7 +44,7 @@ describe('Health Center API', () => {
     const res = await chai.request(app)
       .get('/')
       .send(patient);
-    assert.equal(res.status, 200);
+    chai.assert.equal(res.status, 200);
   });
 
   it('Updating patient', async () => {
