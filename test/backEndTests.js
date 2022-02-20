@@ -76,11 +76,11 @@ describe('Health Center API', () => {
   //     });
   // });
   it('Unavailable patient for deleting', async () => {
-    const patientid = '618e33df815bba7af6ad59d4';
+    const patientid = '618e33df815bba7af6ad59d444';
     chai.request(app)
       .delete('/patients/' + patientid)
       .end((error, response) => {
-        response.should.have.status(404, 400);
+        response.should.have.status(404);
       });
   });
 });
