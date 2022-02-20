@@ -68,6 +68,7 @@ describe('Health Center API', () => {
       // });
     chai.assert.equal(res.status, 201);
     chai.should.be.a('object');
+    done();
   });
   it('Unavailable patient for deleting', async () => {
     const patientid = '618e33df815bba7af6ad59d4';
@@ -79,6 +80,7 @@ describe('Health Center API', () => {
     const res = await chai.request(app)
       .delete('/patients/' + patientid);
     chai.assert.equal(res.status, 404);
+    done();
 
     // chai.assert.equal(res.status, 404);
   });
