@@ -74,7 +74,6 @@ describe('Health Center API', () => {
       .end((error, response) => {
         response.should.have.status(404);
       });
-    
   });
   it('Deleting a patient', async () => {
     const patientid = '620db8bb869dd317ba45d4bc';
