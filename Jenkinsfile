@@ -21,14 +21,14 @@ pipeline {
             steps {
                 // 
                 echo "Running project tests"
-                // sh 'npm test'
+                sh 'npm test'
             }
         }
         stage('Run') { 
             steps {
                 // 
                 echo "Running project"
-                // sh 'npm start'
+                sh 'npm start'
             }
         }
         stage('Deploy') { 
