@@ -87,7 +87,7 @@ exports.deletePatient = async (req, res) => {
     res.status(200).json('Patient successfully deleted!');
   } catch (error) {
     if (error == 'Selected Patient for delete is unavailable.') {
-      return res.status(404).json({ error });
+      return res.status(400).json({ error });
     }
     return res.status(400).json({ error });
   }
