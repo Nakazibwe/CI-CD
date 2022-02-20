@@ -59,13 +59,15 @@ describe('Health Center API', () => {
       gender: 'female',
       category: 'Returnee',
     };
-    chai.request(app)
+    const res = await chai.request(app)
       .put('/patients/' + patientId)
-      .send(updatepatient)
-      .end((error, response) => {
-        response.should.have.status(201);
-        response.should.be.a('object');
-      });
+      .send(updatepatient);
+      // .end((error, response) => {
+      //   response.should.have.status(201);
+      //   response.should.be.a('object');
+      // });
+    chai.assert.equal(res.status, 201);
+    chai.should.be.a('object');
   });
   it('Unavailable patient for deleting', async () => {
     const patientid = '618e33df815bba7af6ad59d4';
@@ -76,7 +78,7 @@ describe('Health Center API', () => {
     //   });
     const res = await chai.request(app)
       .delete('/patients/' + patientid);
-    res.should.have.status(404);
+    chai.assert.equal(res.status, 404);
 
     // chai.assert.equal(res.status, 404);
   });
