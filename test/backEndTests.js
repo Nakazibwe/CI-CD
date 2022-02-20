@@ -8,6 +8,7 @@ const { describe } = require('mocha');
 const app = require('../server');
 const { deleteOne } = require('../models/patientsRegModels');
 
+chai.assert();
 chai.should();
 chai.use(chaiHttp);
 
@@ -34,7 +35,7 @@ describe('Health Center API', () => {
       gender: 'female',
       category: 'Returnee',
     };
-    // const req = await chai.request(app)
+    // chai.request(app)
     //   .post('/')
     //   .send(patient)
     //   .end((error, response) => {
