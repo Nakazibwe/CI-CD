@@ -72,12 +72,11 @@ describe('Health Center API', () => {
     chai.request(app)
       .delete('/patients/' + patientid)
       .end((error, response) => {
-        // response.should.have.status(404);
-        chai.assert.equal(response.status, 400);
+        response.should.have.status(400);
       });
   });
   it('Deleting a patient', async () => {
-    const patientid = '620db8bb869dd317ba45d4bc';
+    const patientid = '620ef0ff47ea8977cd426972';
     chai.request(app)
       .delete('/patients/' + patientid)
       .end((error, response) => {
