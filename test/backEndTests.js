@@ -62,23 +62,20 @@ describe('Health Center API', () => {
     const res = await chai.request(app)
       .put('/patients/' + patientId)
       .send(updatepatient);
-      // .end((error, response) => {
-      //   response.should.have.status(201);
-      //   response.should.be.a('object');
-      // });
-    res.should.have.status(201);
-    res.should.be.a('object');
+      .end((error, response) => {
+        response.should.have.status(201);
+        response.should.be.a('object');
+      });
+    
   });
   it('Unavailable patient for deleting', async () => {
     const patientid = '618e33df815bba7af6ad59d4';
-    // chai.request(app)
-    //   .delete('/patients/' + patientid)
-    //   .end((error, response) => {
-    //     response.should.have.status(404);
-    //   });
-    const res = await chai.request(app)
-      .delete('/patients/' + patientid);
-    res.should.have.status(404);
+    chai.request(app)
+      .delete('/patients/' + patientid)
+      .end((error, response) => {
+        response.should.have.status(404);
+      });
+    
   });
   it('Deleting a patient', async () => {
     const patientid = '620db8bb869dd317ba45d4bc';
