@@ -59,7 +59,7 @@ describe('Health Center API', () => {
       gender: 'female',
       category: 'Returnee',
     };
-    const res = await chai.request(app)
+    chai.request(app)
       .put('/patients/' + patientId)
       .send(updatepatient)
       .end((error, response) => {
