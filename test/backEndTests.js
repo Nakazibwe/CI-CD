@@ -80,7 +80,7 @@ describe('Health Center API', () => {
     chai.request(app)
       .delete('/patients/' + patientid)
       .end((error, response) => {
-        response.should.have.status(404);
+        response.should.have.status(404, 400);
       });
   });
 });
