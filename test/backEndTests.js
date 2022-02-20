@@ -1,14 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prefer-template */
 /* eslint-disable no-undef */
-const chai = require('chai');
+const { assert } = require('chai');
 const mocha = require('mocha');
 const chaiHttp = require('chai-http');
 const { describe } = require('mocha');
 const app = require('../server');
 const { deleteOne } = require('../models/patientsRegModels');
 
-chai.assert();
 chai.should();
 chai.use(chaiHttp);
 
