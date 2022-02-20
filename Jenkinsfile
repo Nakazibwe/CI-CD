@@ -21,7 +21,7 @@ pipeline {
             steps {
                 // 
                 echo "Running project tests"
-                sh 'npm test'
+                // sh 'npm test'
             }
         }
         stage('Run') { 
@@ -31,7 +31,6 @@ pipeline {
                 sh 'npm start'
             }
         }
-        
         stage('Deploy') { 
             steps {
                 // 
