@@ -75,12 +75,12 @@ describe('Health Center API', () => {
         response.should.have.status(400);
       });
   });
-  // it('Deleting a patient', async () => {
-  //   const patientid = '620ef0ff47ea8977cd426972';
-  //   chai.request(app)
-  //     .delete('/patients/' + patientid)
-  //     .end((error, response) => {
-  //       response.should.have.status(200);
-  //     });
-  // });
+  it('Deleting a patient', async () => {
+    const patientid = '620ef0ff47ea8977cd426972';
+    chai.request(app)
+      .delete('/patients/' + patientid)
+      .end((error, response) => {
+        response.should.have.status(200);
+      });
+  });
 });
