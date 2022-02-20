@@ -65,6 +65,7 @@ describe('Health Center API', () => {
       .end((error, response) => {
         response.should.have.status(201);
         response.should.be.a('object');
+        error.should.have.status(400);
       });
   });
   // it('Deleting a patient', async () => {
@@ -80,7 +81,5 @@ describe('Health Center API', () => {
     chai.request(app)
       .delete('/patients/' + patientid)
       .end((error, response) => response.should.have.status(400));
-      
-
   });
 });
