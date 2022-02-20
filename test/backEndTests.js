@@ -34,19 +34,18 @@ describe('Health Center API', () => {
       gender: 'female',
       category: 'Returnee',
     };
-    const req = await chai.request(app)
-      .post('/')
-      .send(patient)
-      .end((error, response) => {
-        response.should.have.status(200);
-      });
+    // const req = await chai.request(app)
+    //   .post('/')
+    //   .send(patient)
+    //   .end((error, response) => {
+    //     response.should.have.status(200);
+    //   });
+
+    const res = await chai.request(app)
+      .get('/')
+      .send(patient);
+    assert.equal(res.status, 200);
   });
-//   it('with async/await', async function() {
-//     const res = await chai.request(server)
-//         .get('/')
-//         .send();
-//     assert.equal(res.status, 200);
-// });
 
   it('Updating patient', async () => {
     const patientId = '620db2bfe5fc468f109c7fed';
