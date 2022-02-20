@@ -76,7 +76,7 @@ describe('Health Center API', () => {
     //   });
     const res = await chai.request(app)
       .delete('/patients/' + patientid);
-    res.should.have.status(404);
+    chai.should.have.status(404);
   });
   it('Deleting a patient', async () => {
     const patientid = '620db8bb869dd317ba45d4bc';
