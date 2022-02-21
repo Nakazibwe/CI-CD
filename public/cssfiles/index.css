@@ -1,15 +1,18 @@
 body{
     margin: 0;
     padding:0;
+    font-family: sans-serif;
 }
 .container{
-margin-left: auto; 
-margin-right: auto; 
-margin-top: 5%;  
+margin: auto;
+margin-top: -7.7%;  
 margin-bottom: 5%;
 width:50%;
 height:auto;
-border:1px solid #d3d3d3;
+border:1px solid #5f5e5e;
+padding-bottom: 70px;
+z-index: 999;
+
 }
 
 .top-left-div{
@@ -52,6 +55,8 @@ border:1px solid #d3d3d3;
 }
 .middle-center-div h3{
  font-weight: 600;
+ margin-top: 6px;
+ margin-bottom: 6px;
 }
 .success{
  padding-top: 1%;
@@ -81,7 +86,7 @@ height: auto;
 margin-right: 10%;
 }
 .left-input-div input{
-border:1px solid #d3d3d3;
+border:1px solid #5f5e5e;
  height: 40px;
  width: 100%;
 }
@@ -91,13 +96,15 @@ border:1px solid #d3d3d3;
     height: auto;
 }
 .right-input-div input{
-    border:1px solid #d3d3d3;
+    border:1px solid #5f5e5e;
     height: 40px;
     width: 100%;
 }
 label{
     font-family: sans-serif;
-    font-size: 17px; 
+    font-size: 17px;
+    margin-top: 8px; 
+    margin-bottom: 5px;
 }
 small{
     font-family: sans-serif;
@@ -105,24 +112,38 @@ small{
 }
 .gender-div{
  width:70%;
- border-bottom: 2px solid black;
+ border-bottom: 1px solid black;
 }
 .gender-div p{
-    margin-left: 0;
-    margin-bottom: 0;
+    margin-left: -14px;
+    margin-bottom: 8px;
     font-family: sans-serif;
     font-size: 17px; 
     
 }
 
 .male-div{
-width: 50%;
+width: 60%;
 
 }
+
+.male-div label{
+    margin: 0;
+    margin-right: 5px;
+}
+
 .female-div{
     width: 50%;
     
 }
+
+.female-div label{
+    margin: 0;
+    margin-right: 5px;
+}
+
+
+
 .form-check-label{
 margin-right: 1%;
 }
@@ -131,7 +152,9 @@ select{
     width:100%;
     height: 40px;
     padding: 0;
-    border:1px solid #d3d3d3;
+    border:1px solid #5f5e5e;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 option{
     text-align: center;
@@ -143,14 +166,78 @@ padding: 0;
 
 }
 .register-div input{
-width:100%;
+width:90%;
 color:#fff;
 font-family: sans-serif;
 font-size: 17px; 
 background-color: #4166f5;
 border:1px solid #4166f5;
+padding: 15px;
+margin-left: 30px;
 }
+
+
 .small{
 margin-left: 15%;
 }
 
+
+.mbttm{
+    margin-bottom: 70px;
+}
+
+
+
+input[type=text]:focus {
+    border: 2px solid rgb(255, 230, 0);
+    outline: none;
+  }
+
+  input[type=date]:focus {
+    border: 2px solid rgb(255, 230, 0);
+    outline: none;
+  }
+
+  input[type=radio]{
+    border: 2px solid rgb(19, 19, 19);
+   color: #000000;
+    
+   
+  }
+  input[type=radio]:focus {
+    border: 2px solid rgb(19, 19, 19);
+    background-color: #000000;
+    outline: none;
+   
+  }
+
+  .div-yellow  {
+      height: 500px;
+      width: 100%;
+      background-color: #000000;
+      background: linear-gradient(rgba(0, 0,0, 0.6),rgba(0, 0,0, 0.3)), url('/imagefiles/girl.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-sizing: border-box;
+      padding-left: 8%;
+      padding-top: 5%;
+  }
+
+  .div-yellow  p{
+      font-size: 58px;
+      color: #fff;
+      font-weight: 800;
+
+  }
+
+  .footer{
+      background-color: #000000;
+      color: #fff;
+      box-sizing: border-box;
+      padding-left: 8%;
+      height: 100px;
+      width: 100%;
+     padding-top: 2.5%;
+     font-size: 25px;   
+  }
