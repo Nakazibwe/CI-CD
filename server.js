@@ -16,10 +16,13 @@ const port = process.env.PORT || 3000;
 // Requiring the dotenv
 require('dotenv').config();
 
+
 // Creating the mongoose connection.
 mongoose.connect(process.env.DATABASE, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  tls: true,
+  tlsCAFile: './ca-certificate.crt',
   // useCreateIndex: true,
 });
 
@@ -32,8 +35,9 @@ mongoose.connection
   });
 
 
+
 // Requiring the models.
-const PatientsReg = require('./models/patientsRegModels')
+const PatientsReg = require('./models/patientsRegModels');
 
 // Requiring the routes.
 const PatientRegRoutes = require('./routes/patientsRegRoutes');
