@@ -9,10 +9,12 @@ html(lang='en')
     link(rel='stylesheet' href='/cssfiles/bootstrap.min.css')
     link(rel='stylesheet' href='/cssfiles/index.css')
   body
+    .div-yellow
+      p Get vaccinated and <br/> save your  self, friends <br/> and family.  
     .row
       .container
         form#form-id(action='' method='POST' name='patientform')
-          .row
+          .mbttm.row
             .col-lg-5.top-left-div
               img(src='/imagefiles/ugandaflag.png' width='266px' height='99px' alt='ugandan flag')
             .col-lg-2.top-center-div
@@ -24,7 +26,7 @@ html(lang='en')
             .col-lg-8.middle-center-div
               p Ministry of Health
               h3 COVID-19(CORONA VIRUS)
-              p Virus-Test Registration Form
+              p Register for a covid-19 test.
             .col-lg-2.middle-right-div
           .row
             .col-lg-2.middle-left-div
@@ -109,5 +111,7 @@ html(lang='en')
             .col-lg-5.register-div
               input(type='submit' value='Register')
             .col-lg-1.
+    .footer 
+      p Emergency call: 098-6748-589-593          
     script(src='/javaScriptfiles/bootstrap.min.js')
     script(src='/javaScriptfiles/index.js')
