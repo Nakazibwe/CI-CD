@@ -10,7 +10,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const { urlencoded } = require('body-parser');
 const app = express();
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 
 
 // Requiring the dotenv
